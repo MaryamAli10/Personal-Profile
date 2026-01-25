@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #140e1a;
+}
+.menu-layout {
+  padding: 0px 40px 0px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  max-width: 1100px;
+}
+
+.menu-btn-list {
+  padding: 0;
+}
+
+.menu-btn-list li {
+  display: inline;
+  padding-left: 10px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: medium;
+}
+
+.menu-btn:hover {
+  color: #737198;
+}
+
+.menu-btn:active {
+  color: #737198;
+}

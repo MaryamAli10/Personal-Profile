@@ -1,0 +1,27 @@
+.about-section-layout {
+  margin: 0% 11%;
+  padding: 3%;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center;
+  width: full;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.intro-section {
+  height: fit-content;
+  flex-grow: 1;
+  max-width: 50%;
+}
+.profile-section {
+  display: flex;
+  flex-grow: 1;
+  height: fit-content;
+  max-width: fit-content;
+  justify-self: end;
+}
+.profile-section img {
+  border-radius: 50%;
+}
