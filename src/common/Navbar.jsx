@@ -2,8 +2,17 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
 
-const Navbar = ({ setPageId }) => {
+const Navbar = ({ setPageId, pageId }) => {
   const [visible, setVisible] = useState(false);
+
+  function menuBtnClick(id) {
+    setPageId(id);
+    document
+      .getElementsByClassName("active-btn")
+      .classList.remove("active-btn");
+    document.getElementById("home-btn").classList.add(".active");
+  }
+
   const menuCollapsible = (
     <div className={`collapsible-menu-layout`}>
       <button
@@ -55,33 +64,39 @@ const Navbar = ({ setPageId }) => {
         <ul className="menu-btn-list">
           <li>
             <button
-              className="menu-btn"
+              id="home-btn"
+              className={`menu-btn ${pageId === "home" ? "active" : ""}`}
               onClick={() => {
                 setPageId("home");
               }}
             >
               HOME
             </button>
+            {pageId === "home" && <div className="active-dot"></div>}
           </li>
           <li>
             <button
-              className="menu-btn"
+              id="project-btn"
+              className={`menu-btn ${pageId === "projects" ? "active" : ""}`}
               onClick={() => {
                 setPageId("projects");
               }}
             >
               PROJECTS
             </button>
+            {pageId === "projects" && <div className="active-dot"></div>}
           </li>
           <li>
             <button
-              className="menu-btn"
+              id="contact-btn"
+              className={`menu-btn ${pageId === "contact" ? "active" : ""}`}
               onClick={() => {
                 setPageId("contact");
               }}
             >
               CONTACT
             </button>
+            {pageId === "contact" && <div className="active-dot"></div>}
           </li>
         </ul>
       </div>

@@ -1,0 +1,6 @@
+.footerContainer {
+  position: sticky;
+  bottom: 0;
+  width: full;
+  height: 56px;
+}

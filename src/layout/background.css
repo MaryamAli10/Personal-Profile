@@ -6,15 +6,14 @@
 
 .shapes {
   padding: 0, 0, 0, 0;
-  z-index: 100;
   color: var(--accent-color1);
   position: absolute;
-  opacity: 40%;
+  opacity: 20%;
   z-index: -20;
   outline: none;
 }
 
-.dot {
+.circle {
   height: 25px;
   width: 25px;
   background-color: #bbb;
@@ -60,7 +59,7 @@
   top: 50%;
   background-color: var(--primary-bg-color);
   border-style: solid;
-  border-width: 2px;
+  border-width: 1.5px;
   animation: grow 20s linear infinite;
 }
 
@@ -75,13 +74,13 @@
 
 #animatedShape4 {
   right: 30%;
-  top: 10%;
-  width: 550px;
-  height: 550px;
+  top: 0%;
+  width: 650px;
+  height: 650px;
   border: solid;
-  border-width: 2px;
+  border-width: 1.5px;
   background-color: var(--primary-bg-color);
-  animation: grow2 20s linear infinite;
+  animation: grow2 10s linear infinite;
 }
 
 @keyframes grow2 {
@@ -89,7 +88,7 @@
     transform: scale(1);
   }
   to {
-    transform: scale(1.01);
+    transform: scale(1.05);
   }
 }
 
@@ -133,6 +132,35 @@
   }
 }
 
+#twinkling-four-point-star {
+  top: 10%;
+  left: 10%;
+  animation: twinkle 5s linear infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 20%;
+  }
+  50% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 20%;
+  }
+}
+
+#twinkling-four-point-star::after,
+#twinkling-four-point-star::before {
+  content: "\2726";
+  font-size: 3rem;
+}
+
+#twinkling-four-point-star::after {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #shape1 {
   right: 15%;
   top: 17%;
@@ -140,4 +168,23 @@
   font-weight: 100;
   line-height: 50%;
   transform: rotate(33deg);
+}
+
+#medium-circle {
+  width: 70px;
+  height: 70px;
+  top: 15%;
+  right: 41%;
+  background-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--accent-color1);
+}
+
+#shape2 {
+  bottom: 30%;
+  right: 46%;
+  grid-template-columns: repeat(3, 5px);
+  grid-template-rows: repeat(3, 5px);
+  gap: 6px;
 }

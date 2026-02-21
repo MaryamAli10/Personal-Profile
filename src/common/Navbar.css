@@ -1,12 +1,12 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 10;
   width: 100%;
-  background-color: #140e1a;
+  background-color: transparent;
 }
 .menu-layout {
-  padding: 0px 40px 0px 40px;
+  padding: 0px 60px 0px 40px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -14,25 +14,40 @@
 }
 
 .menu-btn-list {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
   padding: 0;
 }
 
 .menu-btn-list li {
-  display: inline;
-  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .menu-btn {
+  font-family: inter;
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: medium;
+  color: #727198;
 }
 
 .menu-btn:hover {
-  color: #737198;
+  color: var(--primary-color);
+}
+.menu-btn.active {
+  color: var(--primary-color);
 }
 
-.menu-btn:active {
-  color: #737198;
+.active-dot {
+  content: "";
+  display: inline;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
 }
